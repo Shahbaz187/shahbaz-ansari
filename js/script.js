@@ -2,7 +2,7 @@ const barIcon = document.querySelector(".bars");
 const navLinks = document.querySelector(".nav-links");
 
 barIcon.addEventListener("click", () => {
-    navLinks.style.display = "block"
+    navLinks.style.transition = "0.3s linear";
     if (barIcon.classList.contains('open')) {
         barIcon.src = "assets/icons/close.svg";
         barIcon.classList.replace('open', 'close');
@@ -18,7 +18,7 @@ barIcon.addEventListener("click", () => {
             duration: 0.5,
             delay: 0.5,
         })
-        
+
     } else {
         barIcon.src = "assets/icons/bars.svg";
         barIcon.classList.replace('close', 'open');
@@ -32,14 +32,14 @@ barIcon.addEventListener("click", () => {
 
 
 const mobileNavLinks = document.querySelectorAll(".navbar li")
-    mobileNavLinks.forEach((li) => {
-       li.addEventListener("click" , () => {
-           navLinks.style.display = "none"
-           navLinks.classList.remove('show-nav')
-           barIcon.src = "assets/icons/bars.svg";
-           barIcon.classList.replace('close', 'open');
-       })
+mobileNavLinks.forEach((li) => {
+    li.addEventListener("click", () => {
+        navLinks.style.transition = "none";
+        navLinks.classList.remove('show-nav')
+        barIcon.src = "assets/icons/bars.svg";
+        barIcon.classList.replace('close', 'open');
     })
+})
 
 // Testimonial Section
 
@@ -62,7 +62,7 @@ platBtn2.addEventListener("click", () => {
     video.play()
 })
 
-closeBtn.addEventListener('click' , () => {
+closeBtn.addEventListener('click', () => {
     showVideo.style.display = 'none';
     video.pause(); // Pause the video
     video.currentTime = 0; // Reset the video to the start
@@ -86,7 +86,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 
         if (response.ok) {
             showAlertbox()
-            form.reset(); 
+            form.reset();
         } else {
             alert('Oops! There was a problem with your submission.');
         }
