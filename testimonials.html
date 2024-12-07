@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonial</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/testimonail.css">
+    <link rel="stylesheet" href="css/reponsive.css">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+</head>
+
+<body>
+    <!-- --- Navbar Start --- -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <h4>Shahbaz</h4>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="skills.html">SKILLS</a></li>
+            <li><a href="testimonials.html">TESTIMONIALS</a></li>
+            <li> <a href="contact.html"><button>GET IN TOUCH</button></a></li>
+        </ul>
+        <div class="contact-btn">
+            <a href="contact.html"><button>GET IN TOUCH</button></a>
+        </div>
+        <div class="bars-icon">
+            <img src="assets/icons/bars.svg" class="bars open" alt="ICON_NOT_FOUND">
+        </div>
+    </nav>
+    <!-- --- Navbar End --- -->
+
+<!-- ---  Testimonial Start --- -->
+<section class="testimonial-section" id="testimonials">
+    <div class="testimonial-style-icon">
+        <img src="assets/icons/style icon.svg" alt="IMG_NOT_FOUND">
+        <img src="assets/icons/style icon 2.svg" alt="IMG_NOT_FOUND">
+        <img src="assets/icons/style icon 3.svg" alt="IMG_NOT_FOUND">
+    </div>
+    <div class="heading">
+        <h1>Client Testimonial</h1>
+        <div class="line">
+            <img src="assets/images/Line.svg" alt="IMG_NOT_FOUND">
+        </div>
+        <p>Watch video testimonials from my clients sharing their experience working with me.</p>
+    </div>
+    <div class="testimonial-container">
+        <div class="card-testimonial">
+            <div class="testimonial-video">
+                <img src="assets/images/testimonail thumbnail 1.png" alt="IMG_NOT_FOUND">
+                <div class="play-btn">
+                    <button class="play-button" id="play-btn1">
+                        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+                            <path
+                                d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-testimonial">
+            <div class="testimonial-video">
+                <img src="assets/images/testimonail thumbnail 2.png" alt="IMG_NOT_FOUND">
+                <div class="play-btn">
+                    <button class="play-button" id="play-btn2">
+                        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+                            <path
+                                d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="video-container" id="show-video">
+            <div id='player'>
+                <div class="testimonial-video">
+                    <video id='video-element' src="" autoplay>
+                    </video>
+                    <div id='controls'>
+                        <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+                        <button id='btnReplay' class='replay' title='replay' accesskey="R"
+                            onclick='replayVideo();'>Replay</button>
+                        <button id='btnPlayPause' class='play' title='play' accesskey="P"
+                            onclick='playPauseVideo();'>Play</button>
+                        <button id='btnStop' class='stop' title='stop' accesskey="X"
+                            onclick='stopVideo();'>Stop</button>
+                        <input type="range" id="volume-bar" title="volume" min="0" max="1" step="0.1" value="1">
+                        <button id='btnMute' class='mute' title='mute' onclick='muteVolume();'>Mute</button>
+                        <button id='btnFullScreen' class='fullscreen' title='toggle full screen' accesskey="T"
+                            onclick='toggleFullScreen();'></button>
+                    </div>
+                </div>
+            </div>
+            <div class="close-icon" id="close-icon">
+                <img src="assets/icons/close.svg" alt="IMG_NOT_FOUND">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ---  Testimonial End --- -->
+    <!-- ---  Footer Start --- -->
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/profile.php?id=61559696576340" target="_blank"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/shahbaz_ansari_1807/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/shahbaz-ansari-web-developer/"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:shahbazansari8199@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="skills.html">SKILLS</a></li>
+                    <li><a href="testimonials.html">TESTIMONIALS</a></li>
+                    <li> <a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy; 2024 Shahbaz Ansari. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- ---  Footer End --- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/video.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
